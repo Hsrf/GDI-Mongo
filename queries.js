@@ -55,3 +55,27 @@ db.artists.aggregate([
         }
     }
 ]);
+
+
+// find && text && search && pretty
+db.artists.createIndex( { About: "text" } )
+db.artists.find( { $text: {$search: 'Brazil'} } ).pretty();
+
+// filter && cond && size
+ db.artists.aggregate([
+   {
+      $project: {
+       ArtistName: "$Name",
+         AlbumsWithTwoSongs: {
+            $filter: {
+               input: "$Albuns",
+               cond: { $eq: [ {$size: "$Albuns"}, 2 ] }
+            }
+         }
+      }
+   }
+])
+
+// exists && all
+db.users.find( { FollowedArtists:  { $exists: true, $all:[1, 2] } } ).pretty()
+
