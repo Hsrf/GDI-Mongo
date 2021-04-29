@@ -5,7 +5,7 @@ db.users.insertMany([
         _id: 1,
         Name: 'Igor Simões',
         Email: 'igaoManeiro79@yahoo.com',
-        FollowedArtists: [1],
+        FollowedArtists: [1, 2],
         FavoriteSongs: [3, 8, 10],
     },
     {
@@ -27,6 +27,12 @@ db.users.insertMany([
         Name: 'Elon Musk',
         Email: 'elongatedMusketeer@spacex.mars',
         FollowedArtists: [5, 2],
+        FavoriteSongs: [13],
+    },{
+        _id: 5,
+        Name: 'Thiago Souzza',
+        Email: 'bro@emailDosBros.elonMusk',
+        FollowedArtists: null,
         FavoriteSongs: [13],
     },
 ]);
