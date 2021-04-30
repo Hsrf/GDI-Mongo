@@ -32,7 +32,7 @@ db.users.insertMany([
         _id: 5,
         Name: 'Thiago Souzza',
         Email: 'bro@emailDosBros.elonMusk',
-        FollowedArtists: null,
+        FollowedArtists: [],
         FavoriteSongs: [13],
     },
 ]);
